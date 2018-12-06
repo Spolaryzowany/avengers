@@ -52,15 +52,13 @@ header {
     padding: 10px 0;
     cursor: pointer;
     text-transform: uppercase; }
-    header ul li:hover::after {
-      width: 100%; }
-    header ul li::after {
-      content: '';
-      display: block;
+    header ul li div {
       border-bottom: 3px solid yellow;
       margin-top: 25px;
       width: 0;
       transition: width .3s linear; }
+    header ul li:hover div {
+      width: 100% !important; }
 
 #main-page {
   height: 900px;

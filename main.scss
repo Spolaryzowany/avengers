@@ -62,17 +62,15 @@ header{
         cursor: pointer;
         text-transform: uppercase;
 
-        &:hover::after{
-            width: 100%;
-        }
-
-        &::after{
-            content: '';
-            display: block;
+        div{
             border-bottom: 3px solid yellow;
             margin-top: 25px;
             width: 0;
             transition: width .3s linear;
+        }
+
+        &:hover div{
+            width: 100% !important;
         }
     }
 }
