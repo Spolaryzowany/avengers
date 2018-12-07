@@ -254,18 +254,23 @@ header {
       height: 300px;
       float: left;
       margin: 0 10px;
-      position: relative; }
+      position: relative;
+      overflow: hidden; }
       #stats #content #av .film:hover .effect {
         height: 300px;
-        border: 2px solid white; }
+        border: 2px solid red; }
+      #stats #content #av .film:hover img {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.2); }
     #stats #content #av .film img {
       padding: 0;
       width: 200px;
       height: 300px;
-      display: block; }
+      display: block;
+      transition: all .3s linear; }
     #stats #content #av .film .effect {
       position: absolute;
-      background-color: rgba(182, 0, 0, 0.8);
+      background-color: rgba(51, 41, 41, 0.5);
       left: 0;
       top: 0;
       width: 200px;

@@ -348,10 +348,16 @@ header{
             float: left;
             margin: 0 10px;
             position: relative;
+            overflow: hidden;
 
             &:hover .effect{
                 height: 300px;
-                border: 2px solid white;
+                border: 2px solid red;
+            }
+
+            &:hover img{
+                -webkit-transform: scale(1.1);
+                transform: scale(1.2);
             }
         }
 
@@ -360,11 +366,12 @@ header{
             width: 200px;
             height: 300px;
             display: block;
+            transition: all .3s linear;
         }
 
         .film .effect{
             position: absolute;
-            background-color: rgba(182, 0, 0, .8);
+            background-color: rgba(51, 41, 41, 0.5);
             left: 0;
             top: 0;
             width: 200px;
