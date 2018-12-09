@@ -37,3 +37,26 @@ $('header ul li').click(function(){
     if($scrollNumber != 0) $scrollNumber -= 74; 
     $('html').animate({scrollTop: $scrollNumber + 'px'},1000);
 })
+
+$('button').click(function(){
+    $('#yt').fadeIn(800);
+
+    var $scrollNumber = $(this).attr('data-scroll');
+    var $url = $(this).attr('data-url');
+    if($scrollNumber){
+        $('html').animate({scrollTop: $scrollNumber - 74},1000);
+    }
+    else if($url){
+        $('#yt iframe').attr({
+            frameborder: 0,
+            height: 400,
+            width: 650,
+            src: $url
+        })
+    }
+})
+
+$('#yt i').click(function(){
+    $('#yt').fadeOut(800);
+    $('#yt iframe').attr('src','');
+})
